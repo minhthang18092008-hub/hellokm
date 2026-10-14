@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gửi Kiều My ❤️</title>
+    <!-- Font chữ từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Âm thanh (Nhạc nền và hiệu ứng nổ bóng) -->
+    <audio id="bg-music" src="./style/nhac.mp3" loop></audio>
+    <audio id="pop-sound" src="./style/pop.mp3"></audio>
+
+    <!-- MÀN HÌNH 1: Không gian Bong Bóng -->
+    <div id="screen-1" class="screen active">
+        <div class="instruction">Hãy chạm vào những bong bóng kỷ niệm nhé...</div>
+        <div id="bubbles-container"></div>
+    </div>
+
+    <!-- MÀN HÌNH 2: Slider 3D Lời Chúc (Bị ẩn lúc đầu) -->
+    <div id="screen-2" class="screen hidden">
+        <div class="slider-container">
+            <div id="slider-wrapper" class="slider-wrapper">
+                <!-- Nội dung slider sẽ được JS tự động tạo vào đây -->
+            </div>
+            
+            <!-- Nút điều hướng Slider -->
+            <button id="prev-btn" class="slider-nav prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="next-btn" class="slider-nav next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- MODAL 1: Hiển thị Kỷ Niệm (Glassmorphism) -->
+    <div id="memory-modal" class="modal hidden">
+        <div class="modal-content glass-effect">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <img id="memory-img" src="" alt="Kỷ niệm">
+            <div id="memory-text" class="modal-text"></div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Xác nhận xem lại từ đầu -->
+    <div id="confirm-modal" class="modal hidden">
+        <div class="modal-content glass-effect confirm-box">
+            <h2>Xem lại từ đầu nhé? ❤️</h2>
+            <div class="confirm-btns">
+                <button id="btn-yes" class="btn yes">Đồng ý</button>
+                <button id="btn-no" class="btn no">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- File JS -->
+    <script src="script.js"></script>
+</body>
+</html>
